@@ -1,6 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 const Mouse = () => {
   const [mouseX, setmouseX] = useState(10);
   const [mouseY, setmouseY] = useState(10);
@@ -16,13 +18,24 @@ const Mouse = () => {
     }
   }, [])
 
+  useGSAP(() => {
+    gsap.to('.light', {
+      boxShadow: `1px 1px 50px 20px var(--accent-one-color)`,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+    })
+  })
+
   return (
-    <figure className='absolute -translate-x-1/2 -translate-y-1/2  rounded-full bg-[#FF4141] ' style={{
-      pointerEvents: 'none',
-      zIndex: -1,
+    <section className='light fixed bg-[var(--accent-one-color)] w-[5px] h-[5px] rounded-full top-1/2 left-1/2 z-[1] blur-xl' style={{
+      boxShadow: `1px 1px 10px 10px var(--accent-one-color)`,
       top: `${mouseY}px`,
-      left: `${mouseX}px`
-    }}>    </figure>
+      left: `${mouseX}px`,
+      transform: `translate(-50%,-50%)`
+
+    }}>
+    </section >
   )
 }
 

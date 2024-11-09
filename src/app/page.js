@@ -1,12 +1,9 @@
 "use client"
-import { useGSAP } from '@gsap/react'
-import React, { useEffect, useRef, useState } from 'react'
-import gsap from 'gsap'
+import React from 'react'
 import IntroSection from '@/components/IntroSection'
 import ContactSection from '@/components/ContactSection'
 import ProfileSection from '@/components/ProfileSection'
 import TechSection from '@/components/TechSection'
-import Mouse from '@/components/Mouse'
 const page = () => {
 
 
@@ -39,7 +36,7 @@ const page = () => {
 
 
   return (
-    <main >
+    <main className='z-[2]'>
       <IntroSection />
       <ContactSection />
       <ProfileSection />

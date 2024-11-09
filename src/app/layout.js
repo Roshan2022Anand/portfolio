@@ -26,8 +26,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
-
-        <Mouse/>
+        <Mouse />
         {children}
       </body>
     </html>
