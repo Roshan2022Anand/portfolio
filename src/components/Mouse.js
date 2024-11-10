@@ -21,14 +21,14 @@ const Mouse = () => {
   useGSAP(() => {
     gsap.to('.light', {
       boxShadow: `1px 1px 50px 20px var(--accent-one-color)`,
-      duration: 2,
+      duration: 0.3,
       repeat: -1,
       yoyo: true,
     })
   })
 
   return (
-    <section className='light fixed bg-[var(--accent-one-color)] w-[5px] h-[5px] rounded-full top-1/2 left-1/2 z-[1] blur-xl' style={{
+    <section className='light fixed bg-accentOne w-[5px] h-[5px] rounded-full z-[1] blur-xl' style={{
       boxShadow: `1px 1px 10px 10px var(--accent-one-color)`,
       top: `${mouseY}px`,
       left: `${mouseX}px`,

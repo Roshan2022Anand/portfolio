@@ -1,9 +1,12 @@
 "use client"
 import React from 'react'
-import IntroSection from '@/components/IntroSection'
-import ContactSection from '@/components/ContactSection'
-import ProfileSection from '@/components/ProfileSection'
-import TechSection from '@/components/TechSection'
+import IntroSection from '@/components/sections/IntroSection'
+import ContactSection from '@/components/sections/ContactSection'
+import TechSection from '@/components/sections/TechSection'
+import ExperienceSection from "@/components/sections/ExperienceSection"
+import ResumeSection from '@/components/sections/ResumeSection'
+import ThemeSection from '@/components/sections/ThemeSection'
+import ProjectSection from '@/components/sections/ProjectSection'
 const page = () => {
 
 
@@ -36,11 +39,14 @@ const page = () => {
 
 
   return (
-    <main className='z-[2]'>
-      <IntroSection />
+    <main className='main z-[2]'>
+      <IntroSection/>
+      <ResumeSection/>
+      <ThemeSection/>
       <ContactSection />
-      <ProfileSection />
       <TechSection />
+      <ExperienceSection/>
+      <ProjectSection/>
     </main>
 
   )
