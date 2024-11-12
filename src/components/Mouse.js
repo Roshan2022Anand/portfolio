@@ -5,22 +5,9 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 const Mouse = () => {
 
-  // useGSAP(() => {
-  //   gsap.to('.light', {
-  //     boxShadow: `1px 1px 50px 20px var(--accent-one-color)`,
-  //     duration: 0.3,
-  //     repeat: -1,
-  //     yoyo: true,
-  //   })
-  // })
-// 1/2  0.1
-// 2  0.2
-// 3  0.3
   useEffect(() => {
     const moveDivs = (e) => {
       document.querySelectorAll('.moveing-div').forEach((div, i) => {
-        console.log((i+1)/2*0.2+"->"+i);
-        
         gsap.to(div, {
           top: `${e.y}px`,
           left: `${e.x}px`,

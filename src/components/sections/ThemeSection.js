@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from 'react'
-import { Moon, Sun } from "lucide-react";
+import { Check, Moon, Sun } from "lucide-react";
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const ThemeSection = () => {
 
@@ -21,19 +23,26 @@ const ThemeSection = () => {
     root.style.setProperty("--accent-two-color", "#C6FB51"); // Same as light theme
   }
 
-
   return (
-    <section className='theme-section flex items-center  p-3'>
-      <button className='grow h-full rounded-lg ' onClick={() => { settheme("dark") }}
-        style={{
-          backgroundColor: theme === "dark" ? "var(--accent-two-color)" : "",
-          color: theme === "dark" ? "var(--primary-color)" : ""
-        }}><Moon className='mx-auto' /></button>
-      <button className='grow h-full rounded-lg ' onClick={() => { settheme("light") }}
-        style={{
-          backgroundColor: theme === "light" ? "var(--accent-two-color)" : "",
-          color: theme === "light" ? "var(--primary-color)" : ""
-        }}><Sun className='mx-auto' /></button>
+    <section className='theme-section flex flex-col gap-1 p-2'>
+      <nav className='h-[30%] flex'>
+        <button className='grow h-full rounded-lg ' onClick={() => { settheme("dark") }}
+          style={{
+            backgroundColor: theme === "dark" ? "var(--accent-two-color)" : "",
+            color: theme === "dark" ? "var(--primary-color)" : ""
+          }}><Moon className='mx-auto' /></button>
+        <button className='grow h-full rounded-lg ' onClick={() => { settheme("light") }}
+          style={{
+            backgroundColor: theme === "light" ? "var(--accent-two-color)" : "",
+            color: theme === "light" ? "var(--primary-color)" : ""
+          }}><Sun className='mx-auto' /></button>
+      </nav>
+      <article className='grow flex flex-col  justify-evenly bg-accentTwo rounded-lg px-2'>
+        {["Open to Work", "Frontend", "FullStack"].map((val, i) => (<p key={i} className=' bg-primary  rounded-md px-1 flex items-center justify-between  w-2/3' style={{
+          alignSelf: i == 1 ? "self-end" : "self-start",
+          flexDirection: i === 1 ? "row-reverse" : "row"
+        }}>{val}<Check className='my-1 rounded-full bg-accentTwo text-primary' /></p>))}
+      </article>
     </section>
   )
 }

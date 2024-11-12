@@ -73,8 +73,8 @@ video {
   gap: 1rem;
   grid-template-areas:
     "intro intro theme"
-    "intro intro resume"
-    "tech tech contact"
+    "intro intro theme"
+    "tech tech resume"
     "tech tech contact"
     "project project experience";
 
@@ -89,6 +89,7 @@ video {
 
 .intro-section {
   grid-area: intro;
+  z-index: 1;
 }
 
 .tech-section {
