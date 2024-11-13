@@ -2,7 +2,6 @@ import React from 'react'
 
 const ExperienceSection = () => {
   return (
-
     <section className='experience-section'>Experience
       <div>
         some ranomd things
