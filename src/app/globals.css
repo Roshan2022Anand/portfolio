@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #2B2B2B;
-  --color-secondary: #f58464;
-  --color-text: #f0ebd7;
-  --color-accent-1: #cfea45;
-  --color-accent-2: #be242a;
+  --color-one: #151419;
+  --color-two: #878787;
+  --color-three: #1b1b1e;
+  --color-four: #262626;
+  --color-text: #fbfbfb;
+  --color-accent: #f56e0f;
   --font-primary: "IBM Plex Mono", monospace;
   --font-secondary: "Orbitron", sans-serif;
 }
 
 :root {
-  --secondary-bg: #f58464;
-  --primary-bg: #2B2B2B;
-  --text: #f0ebd7;
-  --accent-1: #cfea45;
-  --accent-2: #be242a;
+  --bg-one: #151419;
+  --bg-two: #878787;
+  --bg-three: #1b1b1e;
+  --bg-four: #262626;
+  --test-one: #fbfbfb;
+  --accent-one: #f56e0f;
   --font-primary: "IBM Plex Mono", monospace;
   --font-secondary: "Orbitron", sans-serif;
   --spacing-xs: 0.5rem;
@@ -37,8 +39,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
-  background-color: var(--primary-bg);
-  color: var(--text);
+  background-color: black;
+  color: var(--test-one);
 }
 
 img,
@@ -65,7 +67,7 @@ h3 {
 }
 
 p {
-  font-size: clamp(1rem, 0.8rem + 0.5vw, 1.25rem);
+  font-size: clamp(.7em, 0.8rem + 0.5vw, 1rem);
   font-family: var(--font-primary);
   line-height: 1.7;
   max-width: 65ch;
@@ -93,12 +95,28 @@ p {
 }
 
 button {
-  display: inline-block;
-  padding: .25rem .5rem;
   border-radius: 0.25rem;
   cursor: pointer;
 
-  &:hover {
+  &:active {
     transform: scale(0.85);
   }
+}
+
+.input-field {
+  border-radius: 5px;
+  background-color: var(--bg-two);
+  outline: none;
+  color: black;
+  font-weight: bold;
+  padding: 0 5px;
+
+  &:focus {
+    outline: 3px solid var(--accent-one);
+  }
+}
+
+span {
+  font-family: var(--font-secondary);
+  color: var(--accent-one);
 }

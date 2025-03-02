@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { FaHandPeace, FaReact, FaSquareXTwitter } from "react-icons/fa6";
+import { FaHandPeace, FaReact } from "react-icons/fa6";
 import { IoLogoNodejs } from "react-icons/io";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb, SiTypescript } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 
 const Intro = () => {
   return (
@@ -20,35 +20,66 @@ const Intro = () => {
             className="size-full object-cover"
           />
         </section>
-        <section className="flex  items-center ">
+        <section className="flex items-center">
           <h1 className="font-bold">˗ˏˋ</h1>
           <h1>roshan anand</h1>
           <h1 className="font-bold">ˎ</h1>
-          <FaHandPeace className="icon-lg text-accent-1 rotate-12" />
+          <FaHandPeace className="icon-lg text-accent rotate-12" />
         </section>
       </figure>
 
-      <figure className="w-full">
-        <h3>
-          {"< "}
-          <span className="text-accent-1">Backend first</span>
-          {" >"}
-        </h3>
-        <section className="w-[80%] ml-10 flex gap-2 flex-wrap">
-          <SiMongodb className="size-[20%] rounded-lg" />
-          <SiExpress className="size-[20%] rounded-lg" />
-          <FaReact className="size-[20%] rounded-lg" />
-          <IoLogoNodejs className="size-[20%] rounded-lg" />
-          <SiTypescript className="size-[20%] rounded-lg" />
-          <RiNextjsFill className="size-[20%] rounded-lg" />
-          <BiLogoPostgresql className="size-[20%] rounded-lg" />
-          <RiTailwindCssFill className="size-[20%] rounded-lg" />
-        </section>
-        <h3>
-          {"< "}
-          <span className="text-accent-1">Fullstack Dev</span>
-          {" />"}
-        </h3>
+      <figure className="w-full bg-[#a3afba] rounded-lg">
+        <div className="bg-[#161719] rounded-lg m-[30px] p-2">
+          <section className="flex gap-2 [&>div]:size-[10px] mb-2">
+            <div className="rounded-full bg-[#ff5f57]"></div>
+            <div className="rounded-full bg-[#ffbd2c]"></div>
+            <div className="rounded-full bg-[#27c83f]"></div>
+          </section>
+          <h3 className="ml-10">
+            {"< "}
+            <span className="text-accent">Backend first</span>
+            {" >"}
+          </h3>
+          <section className="w-[70%] xl:w-[60%] ml-[70px] grid grid-cols-4 xl:gap-4 [&>p]:flex [&>p]:flex-col [&>p]:items-center [&>p]:gap-1">
+            <p>
+              <SiMongodb className="size-[80%] rounded-lg" />
+              <span>MongoDB</span>
+            </p>
+            <p>
+              <SiExpress className="size-[80%] rounded-lg" />
+              <span>Express</span>
+            </p>
+            <p>
+              <FaReact className="size-[80%] rounded-lg" />
+              <span>React</span>
+            </p>
+            <p>
+              <IoLogoNodejs className="size-[80%] rounded-lg" />
+              <span>NodeJS</span>
+            </p>
+            <p>
+              <SiTypescript className="size-[80%] rounded-lg" />
+              <span>Typescript</span>
+            </p>
+            <p>
+              <TbBrandNextjs className="size-[80%] rounded-lg" />
+              <span>NextJS</span>
+            </p>
+            <p>
+              <BiLogoPostgresql className="size-[80%] rounded-lg" />
+              <span>PSQL</span>
+            </p>
+            <p>
+              <RiTailwindCssFill className="size-[80%] rounded-lg" />
+              <span>TailwindCSS</span>
+            </p>
+          </section>
+          <h3 className="ml-10">
+            {"</ "}
+            <span className="text-accent">Fullstack Dev</span>
+            {" >"}
+          </h3>
+        </div>
       </figure>
     </aside>
   );

@@ -1,5 +1,6 @@
 import Contact from "@/components/Contact";
 import Intro from "@/components/Intro";
+import Utlity from "@/components/Utlity";
 import React from "react";
 
 const page = () => {
@@ -9,7 +10,8 @@ const page = () => {
     mx-auto"
     >
       <Intro />
-      <section className="xl:w-1/2 xl:ml-auto h-[150vh]">
+      <section className="flex flex-col gap-2 xl:w-1/2 xl:ml-auto my-3 xl:px-2">
+        <Utlity/>
         <Contact />
       </section>
     </main>
